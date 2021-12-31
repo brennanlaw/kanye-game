@@ -1,0 +1,62 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    color: white;
+}
+
+.App {
+    padding: 0;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Tint color */
+    background-blend-mode: multiply;
+}
+
+.content {
+    padding: 2rem;
+    max-width: 800px;
+    width: 100%;
+    height: 100vh;
+    margin:auto;
+    border: solid red 1px;
+    text-align: center;
+
+    /* display: grid;
+    grid-template-columns: 40% 20% 40%;
+    grid-template-rows: 50% 20% 30%;
+    grid-template-areas: 
+      "quote quote quote" 
+      "yes . no"
+      ". play ."; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-container {
+    display: flex;
+    margin-top: 10rem;
+}
+
+.btn-container * {
+    margin: 2rem;
+}
+
+btn {
+    text-align: center;
+    width: 300px;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    background-color: rgb(32, 110, 255);
+    /* margin: 3rem; */
+    
+}
+
+btn:hover {
+    cursor:pointer;
+}
+
