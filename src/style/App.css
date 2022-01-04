@@ -3,6 +3,7 @@
 body {
     margin: 0;
     color: white;
+    text-align: center;
 }
 
 .App {
@@ -10,18 +11,27 @@ body {
     height: 100vh;
     background-size: cover;
     background-position: center;
-    background-color: rgba(0, 0, 0, 0.8); /* Tint color */
+    background-color: rgba(0, 0, 0, 0.7); /* Tint color */
     background-blend-mode: multiply;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
+.header {
+    margin: 0;
+    background-color: rgb(17, 17, 17);
+
+}
+
+
 .content {
+    flex-grow: 2;
     padding: 2rem;
     max-width: 800px;
     width: 100%;
-    height: 100vh;
-    margin:auto;
-    border: solid red 1px;
-    text-align: center;
+    margin: auto;
+    /* border: solid red 1px; */
 
     /* display: grid;
     grid-template-columns: 40% 20% 40%;
@@ -34,29 +44,51 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+}
+
+.quote {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
 }
 
 .btn-container {
     display: flex;
-    margin-top: 10rem;
 }
 
 .btn-container * {
-    margin: 2rem;
+    margin: 1.5rem;
 }
 
-btn {
-    text-align: center;
-    width: 300px;
+button {
+    color: white;
+    width: 125px;
+    height: 125px;
     padding: 2rem;
     border-radius: 0.5rem;
-    background-color: rgb(32, 110, 255);
-    /* margin: 3rem; */
-    
+    background-color: rgb(54, 106, 204);
 }
 
-btn:hover {
-    cursor:pointer;
+button:hover {
+    cursor: pointer;
+}
+
+.play-btn {
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+}
+
+.correct {
+    background-color: rgb(5, 153, 0);
+}
+
+.wrong {
+    background-color: rgb(184, 0, 0);
+}
+
+.neutral {
+    background-color: rgb(92, 92, 92);
 }
 

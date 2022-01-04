@@ -1,0 +1,9 @@
+-style buttons
+-new game animation, shows background then tints
+-change fonts
+-guess animation, play again button appears by animation
+-blur sides of main content
+-credit sources
+-add more images
+-fake quotes
+-github pages
