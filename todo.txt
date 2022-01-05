@@ -1,8 +1,11 @@
 -style buttons
+-guess animation, play again button appears by animation
 -new game animation, shows background then tints
 -change fonts
--guess animation, play again button appears by animation
 -blur sides of main content
+
+-media query for desktop
+-improve header styling
 -credit sources
 -add more images
 -fake quotes
