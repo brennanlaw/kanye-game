@@ -11,7 +11,7 @@ Simple game where the player is presented with a quote and guesses whether or no
 
 Quotes gathered from kanye.rest: https://kanye.rest/
 
-Animations from Anim: https://animista.net/
+Animations from Animista: https://animista.net/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
