@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/kanye-game/static/css/main.0fc9b646.css",
+    "main.js": "/kanye-game/static/js/main.93471be2.js",
+    "index.html": "/kanye-game/index.html",
+    "main.0fc9b646.css.map": "/kanye-game/static/css/main.0fc9b646.css.map",
+    "main.93471be2.js.map": "/kanye-game/static/js/main.93471be2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0fc9b646.css",
+    "static/js/main.93471be2.js"
+  ]
+}
