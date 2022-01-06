@@ -5,15 +5,14 @@ body {
     margin: 0;
     color: white;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    min-width: 250px;
 }
 
 .App {
     padding: 0;
     height: 100vh;
+    width: 100%;
     min-width: 250px;
+    min-height: 430px;
     background-size: cover;
     background-position: center;
     background-color: rgba(0, 0, 0, 0.7); /* Tint color */
@@ -175,7 +174,7 @@ button {
     }
 }
   
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
     button {
         width: 20rem;
         font-size: 1rem;
