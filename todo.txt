@@ -3,11 +3,12 @@
 -new game animation, shows background then tints
 -change fonts
 -blur sides of main content
-
 -media query for desktop
 -improve header styling
 -credit sources
+
 -add more images
 -fake quotes
 -github pages
 -readme
+-clean up commented code

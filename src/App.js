@@ -17,7 +17,6 @@ function App() {
     const startGame = () => {
         const isRealQuote = Math.random() < 0.5 ? true : false;
         let newQuote = isRealQuote ? quotes[Math.floor(Math.random() * quotes.length)] : "***Fake Kanye quote***";
-        // newQuote = "aaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaa aaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaa aaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaaaaa aaa aaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaa aaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaaaaa aaa aaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaa aaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaaaaa aaa aaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaa aaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaaaaa aaa aaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaa aaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaaaaa aaa aaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaa aaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaaaaa aaa aaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaa aaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaaaaa aaa aaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaa aaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaaaaa aaa aaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaa aaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaaaaa aaa aaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaa aaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaa "
         let newBackground = images[Math.floor(Math.random() * images.length)];
         setGame({
             quote: newQuote,
@@ -29,11 +28,8 @@ function App() {
     }
 
     const getButtonClass = (isTrueButton) => {
-        if (game.gameOver) {
-            if (game.guess === isTrueButton) return game.guess === game.answer ? "correct" : "wrong";
-            else return "neutral";
-        } 
-        return "";
+        if (game.guess === isTrueButton) return game.guess === game.answer ? "correct" : "wrong";
+        else return "neutral";
     }
 
     useEffect(() => startGame(), [])
@@ -44,8 +40,8 @@ function App() {
 
     return (
         <div className="App" style={{backgroundImage: `url("${game.background}")`}}>
-            <div className="header">
-                <h1>Did Kanye Say This?</h1>
+            <div className={`header ${game.gameOver ? (game.guess === game.answer ? "correct" : "wrong") : ""}`}>
+                <h1>{`${game.gameOver ? (game.answer ? "Kanye said this!" : "Kanye did not say this!") : "Did Kanye Say This?"}`}</h1>
             </div>
             <div className="content">
                 <div className={`quote ${!game.gameOver ? "fade-in-fwd" : ""}`}>
@@ -55,21 +51,21 @@ function App() {
                     <div className="btn-container">
                         <button 
                             id="true-btn" 
-                            className={`${getButtonClass(true)} ${!game.gameOver ? "slide-in-top-2" : ""}`} 
+                            className={`${game.gameOver ? getButtonClass(true) : "active-btn slide-in-top-2"}`} 
                             onClick={() => handleGuess(true)} 
                             disabled={game.gameOver}>
                             Kanye
                         </button>
                         <button 
                             id="false-btn" 
-                            className={`${getButtonClass(false)} ${!game.gameOver ? "slide-in-top-2" : ""}`} 
+                            className={`${game.gameOver ? getButtonClass(false) : "active-btn slide-in-top-2"}`} 
                             onClick={() => handleGuess(false)} 
                             disabled={game.gameOver}>
                             Not Kanye
                         </button>
                     </div>
                     <button 
-                        className={`play-btn ${game.gameOver ? " slide-in-top" : ""}`} 
+                        className={`play-btn active-btn ${game.gameOver ? " slide-in-top" : ""}`} 
                         style={{visibility: game.gameOver ? "visible" : "hidden"}} 
                         onClick={startGame}>
                         Play Again 🔁
