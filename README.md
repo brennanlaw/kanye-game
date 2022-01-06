@@ -3,6 +3,8 @@
 
 Demo (Github Pages): https://brennanlaw.github.io/kanye-game/
 
+![Alt text](public/demo-screenshot.png?raw=true "Demo screenshot")
+
 ## Description
 
 Simple game where the player is presented with a quote and guesses whether or not it was said by Kanye.
