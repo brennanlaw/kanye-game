@@ -46,7 +46,7 @@ function App() {
             </div>
             <div className="content">
                 <div className={`quote ${!game.gameOver ? "fade-in-fwd" : ""}`}>
-                    {`"${game.quote}"`}
+                    <div className="quote-text">{`"${game.quote}"`}</div>
                 </div>
                 <div className="input-area">
                     <div className="btn-container">

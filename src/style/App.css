@@ -49,11 +49,15 @@ body {
     /* https://stackoverflow.com/questions/14962468/how-can-i-combine-flexbox-and-vertical-scroll-in-a-full-height-app */
     height: 0;
 
-    display: flex;
-    align-items: center;
     overflow: auto;
+    display: flex;
+    flex-direction: column;
     font-size: 2rem;
     font-family: 'Vollkorn', serif;
+}
+
+.quote-text {
+    margin: auto 0;
 }
 
 .btn-container {
