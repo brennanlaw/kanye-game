@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import './style/App.css';
 
 const quotes = require("./quotes.json");
+const fakeQuotes = require("./fake-quotes.json");
 const images = require("./images.json");
 
 function App() {
@@ -15,8 +16,8 @@ function App() {
     });
 
     const startGame = () => {
-        const isRealQuote = Math.random() < 0.5 ? true : false;
-        let newQuote = isRealQuote ? quotes[Math.floor(Math.random() * quotes.length)] : "***Fake Kanye quote***";
+        const isRealQuote = Math.random() < 0.7 ? true : false;
+        let newQuote = isRealQuote ? quotes[Math.floor(Math.random() * quotes.length)] : fakeQuotes[Math.floor(Math.random() * fakeQuotes.length)];
         let newBackground = images[Math.floor(Math.random() * images.length)];
         setGame({
             quote: newQuote,

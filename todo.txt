@@ -6,9 +6,8 @@
 -media query for desktop
 -improve header styling
 -credit sources
-
+-github pages
+-clean up commented code
+-readme
 -add more images
 -fake quotes
--github pages
--readme
--clean up commented code
