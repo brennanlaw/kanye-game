@@ -29,6 +29,13 @@ body {
     justify-content: center;
 }
 
+.version {
+    position: absolute;
+    top: 0px;
+    right: 16px;
+    font-size: 11px;
+}
+
 .content {
     padding: 2rem;
     max-width: 800px;

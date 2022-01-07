@@ -43,6 +43,7 @@ function App() {
         <div className="App" style={{backgroundImage: `url("${game.background}")`}}>
             <div className={`header ${game.gameOver ? (game.guess === game.answer ? "correct" : "wrong") : ""}`}>
                 <h1>{`${game.gameOver ? (game.answer ? "Kanye said this!" : "Kanye did not say this!") : "Did Kanye Say This?"}`}</h1>
+                <p className="version">v1.0</p>
             </div>
             <div className="content">
                 <div className={`quote ${!game.gameOver ? "fade-in-fwd" : ""}`}>
