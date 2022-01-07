@@ -109,6 +109,10 @@ button {
     border-radius: 2rem;
 }
 
+.correct,.wrong {
+    transition: background-color 1s ease-out;
+}
+
 .correct {
     background-color: rgb(5, 153, 0);
 }
