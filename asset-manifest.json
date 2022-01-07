@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/kanye-game/static/css/main.0f92a8c6.css",
-    "main.js": "/kanye-game/static/js/main.62d75e51.js",
+    "main.css": "/kanye-game/static/css/main.edc51500.css",
+    "main.js": "/kanye-game/static/js/main.297955c3.js",
     "index.html": "/kanye-game/index.html",
-    "main.0f92a8c6.css.map": "/kanye-game/static/css/main.0f92a8c6.css.map",
-    "main.62d75e51.js.map": "/kanye-game/static/js/main.62d75e51.js.map"
+    "main.edc51500.css.map": "/kanye-game/static/css/main.edc51500.css.map",
+    "main.297955c3.js.map": "/kanye-game/static/js/main.297955c3.js.map"
   },
   "entrypoints": [
-    "static/css/main.0f92a8c6.css",
-    "static/js/main.62d75e51.js"
+    "static/css/main.edc51500.css",
+    "static/js/main.297955c3.js"
   ]
 }
