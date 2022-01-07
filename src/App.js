@@ -16,7 +16,7 @@ function App() {
     });
 
     const startGame = () => {
-        const isRealQuote = Math.random() < 0.7 ? true : false;
+        const isRealQuote = Math.random() < 0.6 ? true : false;
         let newQuote = isRealQuote ? quotes[Math.floor(Math.random() * quotes.length)] : fakeQuotes[Math.floor(Math.random() * fakeQuotes.length)];
         let newBackground = images[Math.floor(Math.random() * images.length)];
         setGame({
